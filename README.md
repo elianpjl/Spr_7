@@ -18,3 +18,6 @@ La aplicación es interactiva y permite a los usuarios seleccionar qué gráfico
 - **Visualización de datos**: La aplicación genera gráficos interactivos utilizando la biblioteca **Plotly Express**.
 - **Interactividad**: Los usuarios pueden seleccionar qué gráficos desean ver (histograma, gráfico de dispersión o ambos).
 - **Fácil de usar**: La interfaz es sencilla e intuitiva, diseñada para que cualquier persona pueda usarla sin necesidad de conocimientos técnicos.
+
+## Link en RENDER
+https://spr-7.onrender.com/
