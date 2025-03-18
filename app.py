@@ -6,7 +6,8 @@ import plotly.express as px
 
 # Leer el archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')  # Ruta relativa
-st.write(car_data.head())  # Probando
+# Asegurar que la columna "odometer" es numérica
+car_data["odometer"] = pd.to_numeric(car_data["odometer"], errors="coerce")
 
 # Crear un encabezado
 st.header('Datos de venta de coches')
