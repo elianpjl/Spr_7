@@ -5,14 +5,13 @@ import streamlit as st
 import plotly.express as px
 
 # Leer el archivo CSV
-car_data = pd.read_csv('vehicles_us.csv')  # Ruta relativa)  # leer los datos
+car_data = pd.read_csv('vehicles_us.csv')  # Ruta relativa
 
 # Crear un encabezado
 st.header('Datos de venta de coches')
 
 # Crear casillas de verificación
 checkbox_hist = st.checkbox('Mostrar histograma')  # casilla para el histograma
-# casilla para el gráfico de dispersión
 checkbox_disper = st.checkbox('Mostrar gráfico de dispersión')
 
 # Casilla para el histograma
@@ -22,7 +21,6 @@ if checkbox_hist:  # si la casilla está seleccionada
 
     # Crear un histograma
     fig = px.histogram(car_data, x="odometer")
-    fig.show()  # crear gráfico de dispersión
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -33,7 +31,6 @@ if checkbox_disper:  # si la casilla está seleccionada
 
     # Crear un gráfico de dispersión
     fig_2 = px.scatter(car_data, x="odometer", y="price")
-    fig_2.show()  # crear gráfico de dispersión
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig_2, use_container_width=True)
