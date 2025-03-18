@@ -34,11 +34,3 @@ if checkbox_disper:  # si la casilla está seleccionada
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig_2, use_container_width=True)
-
-
-# PRUEBA
-
-df_test = pd.DataFrame({"odometer": [10000, 20000, 30000, 40000, 50000], "price": [
-                       5000, 10000, 15000, 20000, 25000]})
-fig_test = px.scatter(df_test, x="odometer", y="price")
-st.plotly_chart(fig_test)
