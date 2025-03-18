@@ -22,6 +22,7 @@ if checkbox_hist:  # si la casilla está seleccionada
 
     # Crear un histograma
     fig = px.histogram(car_data, x="odometer")
+    fig.show()  # crear gráfico de dispersión
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig, use_container_width=True)
@@ -32,6 +33,7 @@ if checkbox_disper:  # si la casilla está seleccionada
 
     # Crear un gráfico de dispersión
     fig_2 = px.scatter(car_data, x="odometer", y="price")
+    fig_2.show()  # crear gráfico de dispersión
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig_2, use_container_width=True)
