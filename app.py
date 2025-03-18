@@ -6,8 +6,6 @@ import plotly.express as px
 
 # Leer el archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')  # Ruta relativa
-# Asegurar que la columna "odometer" es numérica
-car_data["odometer"] = pd.to_numeric(car_data["odometer"], errors="coerce")
 
 # Crear un encabezado
 st.header('Datos de venta de coches')
@@ -36,3 +34,11 @@ if checkbox_disper:  # si la casilla está seleccionada
 
     # Mostrar el gráfico interactivo
     st.plotly_chart(fig_2, use_container_width=True)
+
+
+# PRUEBA
+
+df_test = pd.DataFrame({"odometer": [10000, 20000, 30000, 40000, 50000], "price": [
+                       5000, 10000, 15000, 20000, 25000]})
+fig_test = px.scatter(df_test, x="odometer", y="price")
+st.plotly_chart(fig_test)
