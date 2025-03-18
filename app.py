@@ -6,6 +6,7 @@ import plotly.express as px
 
 # Leer el archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')  # Ruta relativa
+st.write(car_data.head())  # Probando
 
 # Crear un encabezado
 st.header('Datos de venta de coches')
